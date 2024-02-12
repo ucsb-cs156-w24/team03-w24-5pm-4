@@ -15,6 +15,7 @@ function HelpRequestForm({ initialContents, submitAction, buttonLabel = "Create"
     // Stryker restore all
 
     const navigate = useNavigate();
+    
 
     // For explanation, see: https://stackoverflow.com/questions/3143070/javascript-regex-iso-datetime
     // Note that even this complex regex may still need some tweaks
@@ -159,25 +160,16 @@ function HelpRequestForm({ initialContents, submitAction, buttonLabel = "Create"
             <Row>
                 <Col>
                     <Form.Group className="mb-3" >
+                        <Form.Label htmlFor="solved">Solved?</Form.Label>
                         <Form.Check
                             data-testid="HelpRequestForm-solved"
                             id="solved"
-                            label="Solved?"
-                            name="solved"
                             type="switch"
-                        >
-                            <Form.Check.Label htmlFor="solved">Solved?</Form.Check.Label>
-                            <Form.Check.Input
-                                as="input"
-                                data-testid="HelpRequestForm-solved"
-                                id="solved"
-                                type="checkbox"
-                                isInvalid={Boolean(errors.solved)}
-                                {...register("solved", {
-                                    required: "Solved is required."
-                                })}
-                            />
-                        </Form.Check>
+                            isInvalid={Boolean(errors.solved)}
+                            {...register("solved", {
+                                required: "Solved is required."
+                            })}
+                        />
                         <Form.Control.Feedback type="invalid">
                             {errors.solved?.message}
                         </Form.Control.Feedback>
