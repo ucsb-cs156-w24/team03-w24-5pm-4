@@ -1,5 +1,6 @@
 const helpRequestFixtures = {
     oneHelpRequest: {
+        "id": 1,
         "requesterEmail": "test01@gmail.com",
         "teamId": "w24-5pm-4",
         "tableOrBreakoutRoom": "Table 1",
@@ -9,6 +10,7 @@ const helpRequestFixtures = {
     },
     threeHelpRequests: [
         {
+            "id": 1,
             "requesterEmail": "test11@gmail.com",
             "teamId": "w24-5pm-4",
             "tableOrBreakoutRoom": "Table 1",
@@ -17,6 +19,7 @@ const helpRequestFixtures = {
             "solved": true
         },
         {
+            "id": 2,
             "requesterEmail": "test12@gmail.com",
             "teamId": "w24-5pm-4",
             "tableOrBreakoutRoom": "Table 2",
@@ -25,6 +28,7 @@ const helpRequestFixtures = {
             "solved": false
         },
         {
+            "id": 3,
             "requesterEmail": "test13@gmail.com",
             "teamId": "w24-5pm-4",
             "tableOrBreakoutRoom": "Table 3",
