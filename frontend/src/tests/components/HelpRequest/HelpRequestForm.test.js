@@ -48,10 +48,10 @@ describe("HelpRequestForm tests", () => {
         await screen.findByTestId("HelpRequestForm-teamId");
         const requesterEmailField = screen.getByTestId("HelpRequestForm-requesterEmail");
         const teamIdField = screen.getByTestId("HelpRequestForm-teamId");
-        const tableOrBreakoutRoomField = screen.getByTestId("HelpRequestForm-tableOrBreakoutRoom");
-        const requestTimeField = screen.getByTestId("HelpRequestForm-requestTime");
-        const explanationField = screen.getByTestId("HelpRequestForm-explanation");
-        const solvedField = screen.getByTestId("HelpRequestForm-solved");
+        // const tableOrBreakoutRoomField = screen.getByTestId("HelpRequestForm-tableOrBreakoutRoom");
+        // const requestTimeField = screen.getByTestId("HelpRequestForm-requestTime");
+        // const explanationField = screen.getByTestId("HelpRequestForm-explanation");
+        // const solvedField = screen.getByTestId("HelpRequestForm-solved");
         const submitButton = screen.getByTestId("HelpRequestForm-submit");
 
         fireEvent.change(requesterEmailField, { target: { value: 'bad-input' } });
