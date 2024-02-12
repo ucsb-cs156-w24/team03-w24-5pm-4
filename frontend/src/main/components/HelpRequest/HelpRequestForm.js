@@ -160,10 +160,15 @@ function HelpRequestForm({ initialContents, submitAction, buttonLabel = "Create"
                 <Col>
                     <Form.Group className="mb-3" >
                         <Form.Check
+                            data-testid="HelpRequestForm-solved"
+                            id="solved"
+                            label="Solved?"
+                            name="solved"
                             type="switch"
                         >
                             <Form.Check.Label htmlFor="solved">Solved?</Form.Check.Label>
                             <Form.Check.Input
+                                as="input"
                                 data-testid="HelpRequestForm-solved"
                                 id="solved"
                                 type="checkbox"
