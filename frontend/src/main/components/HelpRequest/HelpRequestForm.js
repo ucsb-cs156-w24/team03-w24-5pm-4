@@ -24,7 +24,7 @@ function HelpRequestForm({ initialContents, submitAction, buttonLabel = "Create"
 
     // Stryker disable next-line all
     const email_regex = /[A-Za-z0-9]+@[A-Za-z]{4,}/i; // Accepts at least 1 letter or number, followed by one '@', followed by at least 4 letters.
-    const teamid_regex = /[a-z][0-9]{2}\-[0-9](p|a)m\-[1-4]/i; //Matches a team id
+    const teamid_regex = /[a-z][0-9]{2}-[0-9](p|a)m-[1-4]/i; //Matches a team id
 
     return (
 

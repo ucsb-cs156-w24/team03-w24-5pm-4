@@ -109,7 +109,7 @@ describe("HelpRequestForm tests", () => {
         fireEvent.change(tableOrBreakoutRoomField, { target: { value: 'Table 1' } });
         fireEvent.change(requestTimeField, { target: { value: '2024-02-10T12:00:00' } });
         fireEvent.change(explanationField, { target: { value: 'Test Help Request 01' } });
-        fireEvent.change(solvedField, { target: { value: true } });
+        fireEvent.click(solvedField);
         fireEvent.click(submitButton);
 
         await waitFor(() => expect(mockSubmitAction).toHaveBeenCalled());
