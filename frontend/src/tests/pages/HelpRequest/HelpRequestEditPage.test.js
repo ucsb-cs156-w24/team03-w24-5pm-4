@@ -163,7 +163,7 @@ describe("HelpRequestEditPage tests", () => {
             expect(tableOrBreakoutRoomField).toHaveValue("Table 1");
             expect(requestTimeField).toHaveValue("2024-02-10T12:00");
             expect(explanationField).toHaveValue("Test Help Request 01");
-            expect(solvedField).toBeChecked("false");
+            expect(solvedField).toBeChecked();
             expect(submitButton).toBeInTheDocument();
 
             fireEvent.change(requesterEmailField, { target: { value: 'test02@gmail.com' } })
@@ -171,7 +171,7 @@ describe("HelpRequestEditPage tests", () => {
             fireEvent.change(tableOrBreakoutRoomField, { target: { value: "Table 2" } })
             fireEvent.change(requestTimeField, { target: { value: '2024-02-15T12:00' } })
             fireEvent.change(explanationField, { target: { value: 'Test Help Request 02' } })
-            fireEvent.change(solvedField, { target: { value: true } })
+            fireEvent.click(solvedField)
 
             fireEvent.click(submitButton);
 

@@ -165,14 +165,8 @@ function HelpRequestForm({ initialContents, submitAction, buttonLabel = "Create"
                             data-testid="HelpRequestForm-solved"
                             id="solved"
                             type="switch"
-                            isInvalid={Boolean(errors.solved)}
-                            {...register("solved", {
-                                required: "Solved is required."
-                            })}
+                            {...register("solved")}
                         />
-                        <Form.Control.Feedback type="invalid">
-                            {errors.solved?.message}
-                        </Form.Control.Feedback>
                     </Form.Group>
                 </Col>
             </Row>
