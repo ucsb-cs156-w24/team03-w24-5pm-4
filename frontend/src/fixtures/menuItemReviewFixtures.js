@@ -1,5 +1,3 @@
-import { setAddon } from "@storybook/react";
-
 const menuItemReviewFixtures = {
     oneReview: {
         "id": 47,
