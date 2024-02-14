@@ -20,6 +20,10 @@ describe("RecommendationRequestForm tests", () => {
             </Router>
         );
         await screen.findByText(/Requester Email/);
+        await screen.findByText(/Professor Email/);
+        await screen.findByText(/Explanation/);
+        await screen.findByText(/Date Requested/);
+        await screen.findByText(/Date Needed/);
         await screen.findByText(/Create/);
     });
 
@@ -44,14 +48,23 @@ describe("RecommendationRequestForm tests", () => {
         );
         await screen.findByTestId("RecommendationRequestForm-requesterEmail");
         const requesterEmailField = screen.getByTestId("RecommendationRequestForm-requesterEmail");
+        const professorEmailField = screen.getByTestId("RecommendationRequestForm-professorEmail");
         const dateRequestedField = screen.getByTestId("RecommendationRequestForm-dateRequested");
+        const dateNeededField = screen.getByTestId("RecommendationRequestForm-dateNeeded");
         const submitButton = screen.getByTestId("RecommendationRequestForm-submit");
 
-        fireEvent.change(requesterEmailField, { target: { value: 'bad-input' } });
+        fireEvent.change(requesterEmailField, { target: { value: '@d.e' } });
+        fireEvent.change(professorEmailField, { target: { value: 'a@d.e' } });
         fireEvent.change(dateRequestedField, { target: { value: 'bad-input' } });
+        fireEvent.change(dateNeededField, { target: { value: 'bad-input' } });
         fireEvent.click(submitButton);
 
         await screen.findByText(/Requester Email must be a valid email./);
+        expect(screen.getByText(/Professor Email must be a valid email./)).toBeInTheDocument();
+        expect(screen.getByText(/Requester Email is required. /)).toBeInTheDocument();
+        expect(screen.getByText(/Professor Email is required. /)).toBeInTheDocument();
+        expect(screen.getByText(/Date Requested is required./)).toBeInTheDocument();
+        expect(screen.getByText(/Date Needed is required./)).toBeInTheDocument();
     });
 
     test("Correct Error messsages on missing input", async () => {
@@ -68,6 +81,7 @@ describe("RecommendationRequestForm tests", () => {
 
         await screen.findByText(/Requester Email is required./);
         expect(screen.getByText(/Explanation is required./)).toBeInTheDocument();
+        expect(screen.getByText(/Professor Email is required./)).toBeInTheDocument();
         expect(screen.getByText(/Date Requested is required./)).toBeInTheDocument();
 
     });
@@ -102,7 +116,10 @@ describe("RecommendationRequestForm tests", () => {
 
         await waitFor(() => expect(mockSubmitAction).toHaveBeenCalled());
 
+        expect(screen.queryByText(/Professor Email is required. /)).not.toBeInTheDocument();
+        expect(screen.queryByText(/Professor Email must be a valid email./)).not.toBeInTheDocument();
         expect(screen.queryByText(/Requester Email must be a valid email./)).not.toBeInTheDocument();
+        expect(screen.queryByText(/dateNeeded must be in ISO format/)).not.toBeInTheDocument();
         expect(screen.queryByText(/dateRequested must be in ISO format/)).not.toBeInTheDocument();
 
     });
