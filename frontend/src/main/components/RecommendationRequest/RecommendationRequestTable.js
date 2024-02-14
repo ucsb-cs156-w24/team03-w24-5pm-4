@@ -63,8 +63,13 @@ export default function RecommendationRequestTable({ recommendationRequests, cur
         columns.push(ButtonColumn("Delete", "danger", deleteCallback, "RecommendationRequestTable"));
     } 
 
+    const updatedRecommendationRequests = recommendationRequests.map(obj => ({
+        ...obj,
+        "done": String(obj["done"])
+    }));
+
     return <OurTable
-        data={recommendationRequests}
+        data={updatedRecommendationRequests}
         columns={columns}
         testid={"RecommendationRequestTable"}
     />;
