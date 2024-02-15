@@ -63,7 +63,7 @@ describe("UCSBDiningCommonsMenuItemForm tests", () => {
 
         await screen.findByText(/Station is required./);
         expect(screen.getByText(/Name is required./)).toBeInTheDocument();
-        expect(screen.getByText(/DiningCommonsCode is required./)).toBeInTheDocument();
+        expect(screen.getByText(/Dining Commons Code is required./)).toBeInTheDocument();
 
     });
 
@@ -110,5 +110,4 @@ describe("UCSBDiningCommonsMenuItemForm tests", () => {
     });
 
 });
-
 
