@@ -1,31 +1,35 @@
 const ucsbDiningCommonsMenuItemFixtures = {
-    oneDiningCommonsMenuItem: {
-        "id": 1,
-        "name": "apple",
-        "station": "fruit",
-        "diningCommonsCode": "portola"
-    },
-    threeDiningCommonsMenuItem: [
+    oneItem:
+    [
         {
             "id": 1,
-            "name": "apple",
-            "station": "fruit",
-            "diningCommonsCode": "portola"
-        },
+            "diningCommonsCode": "Carrillo",
+            "name": "Cheese Pizza",
+            "station": "Pizza"
+        }
+    ],
+
+    threeItems:
+    [
         {
             "id": 2,
-            "name": "pita chips",
-            "station": "deli",
-            "diningCommonsCode": "carrillo"
+            "diningCommonsCode": "DLG",
+            "name": "Pepperoni Pizza",
+            "station": "Pizza"
         },
         {
             "id": 3,
-            "name": "french fries",
-            "station": "grill",
-            "diningCommonsCode": "dlg"
-        }
+            "diningCommonsCode": "Carrillo",
+            "name": "Lo Mein",
+            "station": "Wok"
+        },
+        {
+            "id": 4,
+            "diningCommonsCode": "Ortega",
+            "name": "Caesar Salad",
+            "station": "Salad"
+        },
     ]
 };
-
 
 export { ucsbDiningCommonsMenuItemFixtures };
