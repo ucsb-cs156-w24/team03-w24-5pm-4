@@ -1,31 +1,31 @@
-const ucsbDiningCommonsMenuItemFixtures = {
-    oneDiningCommonsMenuItem: {
+const ucsbDatesFixtures = {
+    oneDate: {
         "id": 1,
-        "diningCommonsCode": "portola",
         "name": "apple",
-        "station": "fruit"
+        "station": "fruit",
+        "diningCommonsCode": "portola"
     },
-    threeDiningCommonsMenuItem: [
+    threeDates: [
         {
             "id": 1,
-            "diningCommonsCode": "ortega",
-            "name": "pesto pasta",
-            "station": "entree"
+            "name": "apple",
+            "station": "fruit",
+            "diningCommonsCode": "portola"
         },
         {
             "id": 2,
-            "diningCommonsCode": "dlg",
-            "name": "french fries",
-            "station": "grill"
+            "name": "pita chips",
+            "station": "deli",
+            "diningCommonsCode": "carrillo"
         },
         {
             "id": 3,
-            "diningCommonsCode": "carrillo",
-            "name": "pita chips",
-            "station": "deli"
+            "name": "french fries",
+            "station": "grill",
+            "diningCommonsCode": "dlg"
         }
     ]
 };
 
 
-export { ucsbDiningCommonsMenuItemFixtures };
+export { ucsbDatesFixtures };
