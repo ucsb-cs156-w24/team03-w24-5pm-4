@@ -1,11 +1,11 @@
-const ucsbDatesFixtures = {
-    oneDate: {
+const ucsbDiningCommonsMenuItemFixtures = {
+    oneDiningCommonsMenuItem: {
         "id": 1,
         "name": "apple",
         "station": "fruit",
         "diningCommonsCode": "portola"
     },
-    threeDates: [
+    threeDiningCommonsMenuItem: [
         {
             "id": 1,
             "name": "apple",
@@ -28,4 +28,4 @@ const ucsbDatesFixtures = {
 };
 
 
-export { ucsbDatesFixtures };
+export { ucsbDiningCommonsMenuItemFixtures };
