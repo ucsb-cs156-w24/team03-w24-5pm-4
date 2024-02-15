@@ -1,4 +1,4 @@
-const ucsbDatesFixtures = {
+const ucsbDiningCommonsMenuItemFixtures = {
     oneDate: {
         "id": 1,
         "name": "apple",
@@ -28,4 +28,4 @@ const ucsbDatesFixtures = {
 };
 
 
-export { ucsbDatesFixtures };
+export { ucsbDiningCommonsMenuItemFixtures };
