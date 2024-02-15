@@ -102,7 +102,7 @@ function RecommendationRequestForm({ initialContents, submitAction, buttonLabel 
             <Row>
                 <Col>
                     <Form.Group className="mb-3" >
-                        <Form.Label htmlFor="dateRequested">Date Requested</Form.Label>
+                        <Form.Label htmlFor="dateRequested">Date Requested (iso format)</Form.Label>
                         <Form.Control
                             data-testid="RecommendationRequestForm-dateRequested"
                             id="dateRequested"
@@ -119,7 +119,7 @@ function RecommendationRequestForm({ initialContents, submitAction, buttonLabel 
             <Row>
                 <Col>
                     <Form.Group className="mb-3" >
-                        <Form.Label htmlFor="dateNeeded">Date Needed</Form.Label>
+                        <Form.Label htmlFor="dateNeeded">Date Needed (iso format)</Form.Label>
                         <Form.Control
                             data-testid="RecommendationRequestForm-dateNeeded"
                             id="dateNeeded"
