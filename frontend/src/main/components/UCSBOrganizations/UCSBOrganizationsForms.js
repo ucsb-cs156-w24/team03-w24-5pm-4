@@ -2,7 +2,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
-function UCSBOrganizationsForm({ initialContents, submitAction, buttonLabel = "Create" }) {
+function UCSBOrganizationsForms({ initialContents, submitAction, buttonLabel = "Create" }) {
 
     const {
         register,
@@ -14,7 +14,7 @@ function UCSBOrganizationsForm({ initialContents, submitAction, buttonLabel = "C
 
     const navigate = useNavigate();
 
-    const testIdPrefix = "UCSBOrganizationsForm";
+    const testIdPrefix = "UCSBOrganizationsForms";
 
     return (
         <Form onSubmit={handleSubmit(submitAction)}>
@@ -107,4 +107,4 @@ function UCSBOrganizationsForm({ initialContents, submitAction, buttonLabel = "C
     );
 }
 
-export default UCSBOrganizationsForm;
+export default UCSBOrganizationsForms;
