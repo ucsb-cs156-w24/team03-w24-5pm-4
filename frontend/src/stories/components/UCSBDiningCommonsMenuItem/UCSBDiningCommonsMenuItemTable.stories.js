@@ -5,7 +5,7 @@ import { currentUserFixtures } from 'fixtures/currentUserFixtures';
 import { rest } from "msw";
 
 export default {
-    title: 'components/UCSBDiningCommonsMenuItems/UCSBDiningCommonsMenuItemTable',
+    title: 'components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemTable',
     component: UCSBDiningCommonsMenuItemTable
 };
 
@@ -36,7 +36,7 @@ ThreeItemsAdminUser.args = {
 
 ThreeItemsAdminUser.parameters = {
     msw: [
-        rest.delete('/api/ucsbdiningcommonsmenuitems', (req, res, ctx) => {
+        rest.delete('/api/ucsbdiningcommonsmenuitem', (req, res, ctx) => {
             window.alert("DELETE: " + JSON.stringify(req.url));
             return res(ctx.status(200),ctx.json({}));
         }),
