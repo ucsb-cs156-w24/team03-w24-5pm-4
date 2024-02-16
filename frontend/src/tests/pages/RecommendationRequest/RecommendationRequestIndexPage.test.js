@@ -136,9 +136,5 @@ describe("RecommendationRequestIndexPage tests", () => {
         fireEvent.click(deleteButton);
 
         await waitFor(() => { expect(mockToast).toBeCalledWith("RecommendationRequest with id 1 was deleted") });
-
     });
-
 });
-
-
