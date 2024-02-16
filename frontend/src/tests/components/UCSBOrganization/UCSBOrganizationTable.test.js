@@ -80,7 +80,7 @@ describe("UCSBOrganizationTable tests", () => {
 
   });
 
-  test("Has the expected colum headers and content for adminUser", () => {
+  test("Has the expected column headers and content for adminUser", () => {
 
     const currentUser = currentUserFixtures.adminUser;
 
