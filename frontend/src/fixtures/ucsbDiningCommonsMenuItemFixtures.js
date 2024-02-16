@@ -12,19 +12,19 @@ const ucsbDiningCommonsMenuItemFixtures = {
     threeItems:
     [
         {
-            "id": 2,
+            "id": 1,
             "diningCommonsCode": "DLG",
             "name": "Pepperoni Pizza",
             "station": "Pizza"
         },
         {
-            "id": 3,
+            "id": 2,
             "diningCommonsCode": "Carrillo",
             "name": "Lo Mein",
             "station": "Wok"
         },
         {
-            "id": 4,
+            "id": 3,
             "diningCommonsCode": "Ortega",
             "name": "Caesar Salad",
             "station": "Salad"
