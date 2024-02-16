@@ -5,7 +5,7 @@ const ucsbOrganizationFixtures = {
         "orgCode" : "ZPR",
         "orgTranslationShort" : "ZETA PHI RHO",
         "orgTranslation" : "ZETA PHI RHO",
-        "inactive" : true
+        "inactive" : false
       }
     ],
   
@@ -15,21 +15,21 @@ const ucsbOrganizationFixtures = {
           "orgCode" : "SKY",
           "orgTranslationShort" : "SKYDIVING CLUB",
           "orgTranslation" : "SKYDIVING CLUB AT UCSB",
-          "inactive" : true
+          "inactive" : false
         },
   
         {
           "orgCode" : "OSLI",
           "orgTranslationShort" : "STUDENT LIFE",
           "orgTranslation" : "OFFICE OF STUDENT LIFE",
-          "inactive" : true
+          "inactive" : false
         },
   
         {
           "orgCode" : "KRC",
           "orgTranslationShort" : "KOREAN RADIO CL",
           "orgTranslation" : "KOREAN RADIO CLUB",
-          "inactive" : true  
+          "inactive" : false 
         },
         
     ]
