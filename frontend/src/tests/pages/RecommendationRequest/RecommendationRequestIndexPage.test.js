@@ -68,7 +68,7 @@ describe("RecommendationRequestIndexPage tests", () => {
         setupUserOnly();
         const queryClient = new QueryClient();
         axiosMock.onGet("/api/recommendationrequests/all").reply(200, recommendationRequestFixtures.threeRecommendationRequests);
-      
+
         render(
             <QueryClientProvider client={queryClient}>
                 <MemoryRouter>
