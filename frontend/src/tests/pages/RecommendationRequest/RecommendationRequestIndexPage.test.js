@@ -68,7 +68,7 @@ describe("RecommendationRequestIndexPage tests", () => {
         setupUserOnly();
         const queryClient = new QueryClient();
         axiosMock.onGet("/api/recommendationrequests/all").reply(200, recommendationRequestFixtures.threeRecommendationRequests);
-
+      
         render(
             <QueryClientProvider client={queryClient}>
                 <MemoryRouter>
@@ -136,9 +136,5 @@ describe("RecommendationRequestIndexPage tests", () => {
         fireEvent.click(deleteButton);
 
         await waitFor(() => { expect(mockToast).toBeCalledWith("RecommendationRequest with id 1 was deleted") });
-
     });
-
 });
-
-
