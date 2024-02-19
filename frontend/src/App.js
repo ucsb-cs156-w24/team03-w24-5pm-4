@@ -120,12 +120,13 @@ function App() {
         {
           hasRole(currentUser, "ROLE_ADMIN") && (
             <>
-            
+
               <Route exact path="/recommendationrequests/edit/:id" element={<RecommendationRequestEditPage />} />
               <Route exact path="/recommendationrequests/create" element={<RecommendationRequestCreatePage />} />
             </>
           )
         }
+
 
         {
           hasRole(currentUser, "ROLE_USER") && (
