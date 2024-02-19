@@ -1,10 +1,11 @@
+
 import React from 'react';
 import { apiCurrentUserFixtures } from "fixtures/currentUserFixtures";
 import { systemInfoFixtures } from "fixtures/systemInfoFixtures";
+import { ucsbOrganizationFixtures } from "fixtures/ucsbOrganizationFixtures";
 import { rest } from "msw";
 
 import UCSBOrganizationEditPage from "main/pages/UCSBOrganization/UCSBOrganizationEditPage";
-import { ucsbOrganizationFixtures } from 'fixtures/ucsbOrganizationFixtures';
 
 export default {
     title: 'pages/UCSBOrganization/UCSBOrganizationEditPage',
@@ -23,7 +24,7 @@ Default.parameters = {
             return res(ctx.json(systemInfoFixtures.showingNeither));
         }),
         rest.get('/api/ucsborganizations', (_req, res, ctx) => {
-            return res(ctx.json(ucsbOrganizationFixtures.threeUCSBOrganization[0]));
+            return res(ctx.json(ucsbOrganizationFixtures.threeOrganizations[0]));
         }),
         rest.put('/api/ucsborganizations', async (req, res, ctx) => {
             var reqBody = await req.text();
@@ -32,4 +33,7 @@ Default.parameters = {
         }),
     ],
 }
+
+
+
 
