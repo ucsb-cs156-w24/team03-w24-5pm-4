@@ -58,7 +58,7 @@ describe("UCSBOrganizationForm tests", () => {
         fireEvent.change(inactive, { target: { value: 'bad-input' } });
         fireEvent.click(submitButton);
 
-        await screen.findByText(/Inactive must be true or false/);
+        await screen.findByText(/The input should be just true or false/);
     });
     
     test("Correct Error messsages on missing input", async () => {
