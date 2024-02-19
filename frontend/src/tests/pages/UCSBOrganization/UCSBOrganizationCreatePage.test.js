@@ -62,7 +62,7 @@ describe("UCSBOrganizationCreatePage tests", () => {
             inactive: "false"
         };
 
-        axiosMock.onPost("/api/ucsborganization/post").reply(202, restaurant);
+        axiosMock.onPost("/api/ucsborganizations/post").reply(202, restaurant);
 
         render(
             <QueryClientProvider client={queryClient}>
@@ -112,6 +112,7 @@ describe("UCSBOrganizationCreatePage tests", () => {
 
     });
 });
+
 
 
 
