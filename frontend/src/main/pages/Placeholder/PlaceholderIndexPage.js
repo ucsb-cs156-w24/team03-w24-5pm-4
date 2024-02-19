@@ -1,8 +1,7 @@
 import BasicLayout from "main/layouts/BasicLayout/BasicLayout";
 
 
-export default function PlaceHolderIndexPage() {
-
+export default function PlaceholderIndexPage() {
 
   // Stryker disable all : placeholder for future implementation
   return (  
