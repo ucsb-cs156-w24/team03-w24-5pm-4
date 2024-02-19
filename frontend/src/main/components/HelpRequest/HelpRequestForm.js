@@ -15,6 +15,7 @@ function HelpRequestForm({ initialContents, submitAction, buttonLabel = "Create"
     // Stryker restore all
 
     const navigate = useNavigate();
+    
 
 
     // For explanation, see: https://stackoverflow.com/questions/3143070/javascript-regex-iso-datetime
