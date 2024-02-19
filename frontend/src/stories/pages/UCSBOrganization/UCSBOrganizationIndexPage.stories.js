@@ -22,7 +22,7 @@ Empty.parameters = {
         rest.get('/api/systemInfo', (_req, res, ctx) => {
             return res(ctx.json(systemInfoFixtures.showingNeither));
         }),
-        rest.get('/api/ucsbOrganizations/all', (_req, res, ctx) => {
+        rest.get('/api/ucsborganizations/all', (_req, res, ctx) => {
             return res(ctx.json([]));
         }),
     ]
@@ -38,7 +38,7 @@ ThreeItemsOrdinaryUser.parameters = {
         rest.get('/api/systemInfo', (_req, res, ctx) => {
             return res(ctx.json(systemInfoFixtures.showingNeither));
         }),
-        rest.get('/api/ucsbOrganizations/all', (_req, res, ctx) => {
+        rest.get('/api/ucsborganizations/all', (_req, res, ctx) => {
             return res(ctx.json(ucsbOrganizationFixtures.threeUCSBOrganization));
         }),
     ],
