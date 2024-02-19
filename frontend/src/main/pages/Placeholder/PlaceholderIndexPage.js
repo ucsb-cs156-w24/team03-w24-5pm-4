@@ -1,6 +1,6 @@
 import BasicLayout from "main/layouts/BasicLayout/BasicLayout";
 
-export default function MenuItemReviewIndexPage() {
+export default function PlaceHolderIndexPage() {
 
   // Stryker disable all : placeholder for future implementation
   return (
