@@ -80,7 +80,7 @@ function App() {
             </>
           )
         }
-         {
+        {
           hasRole(currentUser, "ROLE_USER") && (
             <>
               <Route exact path="/placeholder" element={<PlaceholderIndexPage />} />
