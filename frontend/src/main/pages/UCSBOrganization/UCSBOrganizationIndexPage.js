@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useBackend } from 'main/utils/useBackend';
 
@@ -9,6 +10,14 @@ import { useCurrentUser , hasRole} from 'main/utils/currentUser';
 export default function UCSBOrganizationIndexPage() {
 
     const currentUser = useCurrentUser();
+
+    const { data: organizations, error: _error, status: _status } =
+    useBackend(
+      // Stryker disable next-line all : don't test internal caching of React Query
+      ["/api/ucsborganizations/all"],
+      { method: "GET", url: "/api/ucsborganizations/all" },
+      []
+    );
   
     const createButton = () => {
       if (hasRole(currentUser, "ROLE_ADMIN")) {
@@ -23,14 +32,6 @@ export default function UCSBOrganizationIndexPage() {
           )
       } 
     }
-    
-    const { data: organizations, error: _error, status: _status } =
-      useBackend(
-        // Stryker disable next-line all : don't test internal caching of React Query
-        ["/api/ucsborganization/all"],
-        { method: "GET", url: "/api/ucsborganizations/all" },
-        []
-      );
   
     return (
       <BasicLayout>
