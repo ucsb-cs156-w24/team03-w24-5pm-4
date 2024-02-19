@@ -1,4 +1,4 @@
-import { onDeleteSuccess, cellToAxiosParamsDelete } from "main/utils/UCSBDiningCommonsMenuItemUtils";
+import { onDeleteSuccess, cellToAxiosParamsDelete } from "main/utils/articlesUtils";
 import mockConsole from "jest-mock-console";
 
 const mockToast = jest.fn();
@@ -11,11 +11,11 @@ jest.mock('react-toastify', () => {
     };
 });
 
-describe("UCSBDiningCommonsMenuItemUtils", () => {
+describe("ArticlesUtils", () => {
 
     describe("onDeleteSuccess", () => {
 
-        test("Puts the message on console.log and in a toast", () => {
+        test("It puts the message on console.log and in a toast", () => {
             // arrange
             const restoreConsole = mockConsole();
 
@@ -34,7 +34,7 @@ describe("UCSBDiningCommonsMenuItemUtils", () => {
     });
     describe("cellToAxiosParamsDelete", () => {
 
-        test("Returns the correct parameterss", () => {
+        test("It returns the correct params", () => {
             // arrange
             const cell = { row: { values: { id: 17 } } };
 
@@ -43,7 +43,7 @@ describe("UCSBDiningCommonsMenuItemUtils", () => {
 
             // assert
             expect(result).toEqual({
-                url: "/api/ucsbdiningcommonsmenuitem",
+                url: "/api/articles",
                 method: "DELETE",
                 params: { id: 17 }
             });
