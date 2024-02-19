@@ -54,10 +54,10 @@ export default function AppNavbar({ currentUser, systemInfo, doLogout, currentUr
             {
               currentUser && currentUser.loggedIn && (
                 <>
-                  <Nav.Link as={Link} to="/restaurants">Restaurants</Nav.Link>
-                  <Nav.Link as={Link} to="/ucsbdates">UCSB Dates</Nav.Link>
-                  <Nav.Link as={Link} to="/ucsborganization">UCSBOrganization</Nav.Link>
+                  <Nav.Link as={Link} to="/restaurants">Restuuurants</Nav.Link>
+                  <Nav.Link as={Link} to="/ucsbdates">UCSBDates</Nav.Link>
                   <Nav.Link as={Link} to="/placeholder">Placeholder</Nav.Link>
+                  <Nav.Link as={Link} to="/ucsborganization">UCSBOrganization</Nav.Link>
                 </>
               )
             }
@@ -73,7 +73,6 @@ export default function AppNavbar({ currentUser, systemInfo, doLogout, currentUr
                 )
               }
             </Nav>
-            
           </Navbar.Collapse>
         </Container >
       </Navbar >
