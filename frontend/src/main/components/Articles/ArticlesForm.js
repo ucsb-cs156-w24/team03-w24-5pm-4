@@ -49,7 +49,8 @@ function ArticlesForm({ initialContents, submitAction, buttonLabel = "Create" })
                         </Form.Group>
                     </Col>
                 )}
-
+            </Row>
+            <Row>
                 <Col>
                     <Form.Group className="mb-3" >
                         <Form.Label htmlFor="title">Title</Form.Label>
@@ -67,6 +68,8 @@ function ArticlesForm({ initialContents, submitAction, buttonLabel = "Create" })
                         </Form.Control.Feedback>
                     </Form.Group>
                 </Col>
+            </Row>
+            <Row>
                 <Col>
                     <Form.Group className="mb-3" >
                         <Form.Label htmlFor="url">URL</Form.Label>

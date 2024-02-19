@@ -53,7 +53,18 @@ describe("ArticlesForm tests", () => {
         expect(await screen.findByTestId(`${testId}-id`)).toBeInTheDocument();
         expect(screen.getByText(`Id`)).toBeInTheDocument();
     });
+    test("renders correctly when passing in an Article", async () => {
 
+        render(
+            <Router  >
+                <ArticlesForm initialContents={articlesFixtures.oneArticle} />
+            </Router>
+        );
+        await screen.findByTestId(/ArticlesForm-id/);
+        expect(screen.getByText(/Id/)).toBeInTheDocument();
+        expect(screen.getByTestId(/ArticlesForm-id/)).toHaveValue("1");
+
+    });
 
     // test("Correct Error messsages on bad input", async () => {
 
