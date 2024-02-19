@@ -2,19 +2,20 @@ import React from 'react'
 import { useBackend } from 'main/utils/useBackend';
 
 import BasicLayout from "main/layouts/BasicLayout/BasicLayout";
-import RecommendationRequestTable from 'main/components/RecommendationRequest/RecommendationRequestTable';
+import UCSBDiningCommonsMenuItemTable from 'main/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemTable';
 import { useCurrentUser , hasRole} from 'main/utils/currentUser'
 import { Button } from 'react-bootstrap';
 
-export default function RecommendationRequestIndexPage() {
+export default function UCSBDiningCommonsMenuItemIndexPage() {
 
     const currentUser = useCurrentUser();
 
-    const { data: recommendationRequests, error: _error, status: _status } =
+    const { data: items, error: _error, status: _status } =
         useBackend(
             // Stryker disable next-line all : don't test internal caching of React Query
-            ["/api/recommendationrequests/all"],
-            { method: "GET", url: "/api/recommendationrequests/all" },
+            ["/api/ucsbdiningcommonsmenuitem/all"],
+            { method: "GET", url: "/api/ucsbdiningcommonsmenuitem/all" },
+            // Stryker disable next-line all : don't test default value of empty list
             []
         );
 
@@ -23,10 +24,10 @@ export default function RecommendationRequestIndexPage() {
             return (
                 <Button
                     variant="primary"
-                    href="/recommendationrequests/create"
+                    href="/diningcommonsmenuitem/create"
                     style={{ float: "right" }}
                 >
-                    Create Recommendation Request
+                    Create Menu Item
                 </Button>
             )
         } 
@@ -36,8 +37,8 @@ export default function RecommendationRequestIndexPage() {
         <BasicLayout>
             <div className="pt-2">
                 {createButton()}
-                <h1>Recommendation Requests</h1>
-                <RecommendationRequestTable recommendationRequests={recommendationRequests} currentUser={currentUser} />
+                <h1>UCSB Dining Commons Menu Items</h1>
+                <UCSBDiningCommonsMenuItemTable items={items} currentUser={currentUser} />
             </div>
         </BasicLayout>
     );
