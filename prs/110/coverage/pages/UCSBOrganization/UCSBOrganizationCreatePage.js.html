@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">81.81% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>9/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>8/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -135,7 +135,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,10 +154,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,7 +177,7 @@ import { toast } from "react-toastify";
 &nbsp;
 export default function UCSBOrganizationCreatePage({storybook=false}) {
   const objectToAxiosParams = (organization) =&gt; ({
-    url: "/api/ucsborganization/post",
+    url: "/api/ucsborganizations/post",
     method: "POST",
     params: {
      orgCode: organization.orgCode,
@@ -187,8 +187,8 @@ export default function UCSBOrganizationCreatePage({storybook=false}) {
     }
   });
 &nbsp;
-  const onSuccess = (organization) =&gt; {
-    toast(`New organization Created - orgCode: ${organization.orgCode} orgTranslationShort: ${organization.orgTranslationShort}
+  const onSuccess = <span class="fstat-no" title="function not covered" >(o</span>rganization) =&gt; {
+<span class="cstat-no" title="statement not covered" >    toast(`New organization Created - orgCode: ${organization.orgCode} orgTranslationShort: ${organization.orgTranslationShort}</span>
     orgTranslation: ${organization.orgTranslation} inactive: ${organization.inactive}
     `);
   }
@@ -197,7 +197,7 @@ export default function UCSBOrganizationCreatePage({storybook=false}) {
     objectToAxiosParams,
      { onSuccess }, 
      // Stryker disable next-line all : hard to set up test for caching
-     ["/api/ucsborganization/all"] // mutation makes this key stale so that pages relying on it reload
+     ["/api/ucsborganizations/all"] // mutation makes this key stale so that pages relying on it reload
      );
 &nbsp;
   const { isSuccess } = mutation
@@ -206,8 +206,8 @@ export default function UCSBOrganizationCreatePage({storybook=false}) {
     mutation.mutate(data);
   }
 &nbsp;
-  if (isSuccess &amp;&amp; !storybook) {
-    return &lt;Navigate to="/ucsborganization" /&gt;
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (isSuccess &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!storybook)</span> {
+<span class="cstat-no" title="statement not covered" >    return &lt;Navigate to="/ucsborganization" /&gt;</span>
   }
   // Stryker disable all : placeholder for future implementation
   return (
@@ -229,7 +229,7 @@ export default function UCSBOrganizationCreatePage({storybook=false}) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Feb 19 2024 01:06:36 GMT-0800 (Pacific Standard Time)
+                at Mon Feb 19 2024 01:21:22 GMT-0800 (Pacific Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
