@@ -1,6 +1,6 @@
 import { render, waitFor, fireEvent, screen } from "@testing-library/react";
 import UCSBOrganizationForm from "main/components/UCSBOrganization/UCSBOrganizationForm";
-import { ucsbOrganizationsFixtures } from "fixtures/ucsbOrganizationFixtures";
+import { ucsbOrganizationFixtures } from "fixtures/ucsbOrganizationFixtures";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const mockedNavigate = jest.fn();
@@ -29,7 +29,7 @@ describe("UCSBOrganizationForm tests", () => {
 
         render(
             <Router  >
-                <UCSBOrganizationForm initialContents={ucsbOrganizationsFixtures.oneOrganizations} />
+                <UCSBOrganizationForm initialContents={ucsbOrganizationFixtures.oneOrganization} />
             </Router>
         );
         await screen.findByTestId(/UCSBOrganizationForm-orgCode/);
