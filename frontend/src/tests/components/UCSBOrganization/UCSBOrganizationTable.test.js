@@ -20,7 +20,7 @@ describe("UCSBOrganizationTable tests", () => {
   const testId = "UCSBOrganizationTable";
 
   test("renders empty table correctly", () => {
-    
+
     // arrange
     const currentUser = currentUserFixtures.adminUser;
 
@@ -134,7 +134,7 @@ describe("UCSBOrganizationTable tests", () => {
 
     const editButton = screen.getByTestId(`UCSBOrganizationTable-cell-row-0-col-Edit-button`);
     expect(editButton).toBeInTheDocument();
-    
+
     fireEvent.click(editButton);
 
     await waitFor(() => expect(mockedNavigate).toHaveBeenCalledWith('/ucsborganization/edit/SKY'));
